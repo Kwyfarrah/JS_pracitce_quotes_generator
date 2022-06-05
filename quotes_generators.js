@@ -1,3 +1,7 @@
+import quotes from  './quotes.js';
+
+
 export const showquotes = () => {
-    document.querySelector('p').innerHTML = '"When you have a dream, you\'ve have got to grab it and never let go." <h3>—Carol Burnettr</h3>'
+    let randomNumber = Math.floor(Math.random()*quotes.length);
+    document.querySelector('p').innerHTML = `${quotes[randomNumber].quote} <h3>—${quotes[randomNumber].author}`;
   }
